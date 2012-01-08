@@ -1,0 +1,46 @@
+- 29 Desember 2011
+task :
+1. Cari tahu function moveNext, moveLast, movePrev, moveFirst pada PagingationToolbar
+2. Layout report balance sheet
+Progres :
+1. Layout berubah, tidak menggunakan tab namun menggunakan panel
+2. Account list layout:'form' berubah menjadi layout:'fit'
+3. Adding footer
+4. Tree singleExpand:true menjadi singleExpand:false
+5. Grid berubah menjadi memiliki pagination
+
+-30 Desember 2011
+Progress : 
+1. Grid Pagingtoolbar --> finish
+
+03 Januari 2012
+1. Report Balance Sheet sudah memasuki tahap PHP dengan filter sudah di tentukan
+2. Perubahaan pada accordion panel dan form filter
+3. Perubahaan pada report panel
+4. Report Balancesheet selesai 100%
+5. Report Profit Loss 10%
+
+04 Januari 2012
+1. Report Rugi Laba
+2. Fix Tampilan Report Balance Sheet 
+3. Fix Tampilan Report Rugi Laba
+4. Ganti Report Equity ke Report Journal
+5. Category menjadi 3, Pasiva, Aktiva, dan Capital
+6. Report Journal 50%
+
+05 Januari 2012
+1. Report balancesheet disempurnakan
+2. category menjadi 5 --> Aktiva, Pasiva, Capital, Pendapatan Operasional, Beban Operasional
+3. Aktiva --> Debet
+4. Pasiva --> kredit
+5. Capital --> Kredit
+6. Pendapatan Operasional --> Kredit
+7. Beban Operasional --> Debet
+8. Tampilan Report 
+
+06 Januari 2012
+1. Report Journal 100%
+2. Tambah untuk autoscroll pada window
+
+
+

@@ -1,0 +1,46 @@
+1.      Harta
+	1.1.                        Kas
+	1.2.                        Wesel TAgih
+	1.3.                        Piutang Dagang
+	1.4.                        Perlengkapan Kantor
+	1.5.                        Sewa Dibayar di Muka
+	1.6.                        Peralatan
+	1.7.                        Akumulasi Penyusutan Peralatan          
+2.      Hutang
+	2.1.                        Wesel Bayar
+	2.2.                        Hutang Dagang
+	2.3.                        Hutang Bank
+	2.4.                        Hutang Bank
+	2.5.                        Hutang Pajak
+	2.6.                        Hutang gaji
+3.      Modal
+	Perusahaan perseorangan:
+	3.1.                        Modal Sudirman
+	3.2.                        Prive Sudirman
+	3.3.                        Ikhtisar Laba-rugi
+	Persekutuan (Firma/CV):
+	3.1.1.   Modal Abdi
+	3.1.2.   Modal Dedi
+	3.1.3.   Modal Samun
+	3.2.1.   Prive Abdi
+	3.2.2.   Prive Dedi
+	3.2.3.   Prive Samun
+	3.3.3.   Ikhtisar Laba-Rugi
+	Perseroan Terbatas:
+	3.1.      Modal Saham
+            		3.1.0.   Saham Biasa
+            		3.1.1.   Saham Istimewa (Preferent)
+	3.2.      Cadangan
+	3.3.      Laba tidak dibagi 
+
+4.      Penghasilan (Pendapatan)
+	4.1.                        Penghasilan usaha Jasa(Penjualan)
+	4.2.                        Penghasilan Lain – lain
+5.      Biaya – biaya
+	5.1.                        Biaya gaji
+	5.2.                        Biaya Perlengkapan
+	5.3.                        Biaya sewa
+	5.4.                        Biaya penyusutan
+	5.5.                        Biaya Bunga
+	5.6.                        Biaya
+	5.7.                        Biaya Rupa – rupa
