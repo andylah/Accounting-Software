@@ -1,0 +1,52 @@
+/* 
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+[{
+    text:'Account',
+    expanded: true,
+    children:[{
+        text:'Master Account',
+        id:'account',
+        leaf:true
+    },{
+        text:'Master Type',
+        id:'type',
+        leaf:true
+    },{
+        text:'Master Index',
+        id:'index',
+        leaf:true
+    },{
+        text:'Account List',
+        id:'account_list',
+        leaf:true
+    }]
+},{
+    text:'Transaction',
+    children:[{
+        text:'Enter Transaction',
+        id:'transaction',
+        leaf:true
+    }]
+},{
+    text:'Report',
+    children:[{
+        text:'Balance Sheet Report',
+        id:'balancesheet',
+        leaf:true
+    },{
+        text:'Profit & Loss',
+        id:'profitloss',
+        leaf:true
+    },{
+        text:'Report Journal',
+        id:'journal',
+        leaf:true
+    },{
+        text:'Cash Flow',
+        id:'cashflow',
+        leaf:true
+    }]
+}]
