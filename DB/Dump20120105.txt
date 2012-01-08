@@ -1,0 +1,246 @@
+-- phpMyAdmin SQL Dump
+-- version 2.10.3
+-- http://www.phpmyadmin.net
+-- 
+-- Host: localhost
+-- Generation Time: Jan 05, 2012 at 04:46 PM
+-- Server version: 5.0.51
+-- PHP Version: 5.2.6
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+-- 
+-- Database: `project`
+-- 
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `tbl_acc_list`
+-- 
+
+CREATE TABLE `tbl_acc_list` (
+  `idtbl_acc_list` int(11) NOT NULL auto_increment,
+  `acc_num` varchar(6) NOT NULL,
+  `acc_name` varchar(25) NOT NULL,
+  `type_no` varchar(3) NOT NULL,
+  `category` int(5) NOT NULL,
+  PRIMARY KEY  (`idtbl_acc_list`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=31 ;
+
+-- 
+-- Dumping data for table `tbl_acc_list`
+-- 
+
+INSERT INTO `tbl_acc_list` VALUES (1, '1-1000', 'Kas di bank', '1-1', 0);
+INSERT INTO `tbl_acc_list` VALUES (2, '1-2000', 'Piutang', '1-2', 0);
+INSERT INTO `tbl_acc_list` VALUES (3, '1-3100', 'Asuransi dibayar dimuka', '1-3', 0);
+INSERT INTO `tbl_acc_list` VALUES (4, '1-3200', 'Sewa dibayar dimuka', '1-3', 0);
+INSERT INTO `tbl_acc_list` VALUES (5, '1-4100', 'Peralatan kantor', '1-4', 0);
+INSERT INTO `tbl_acc_list` VALUES (6, '1-4200', 'Akum dep peralatan kantor', '1-4', 0);
+INSERT INTO `tbl_acc_list` VALUES (7, '1-4400', 'Akum dep kendaraan', '1-4', 0);
+INSERT INTO `tbl_acc_list` VALUES (11, '2-2100', 'Utang Bunga', '2-2', 1);
+INSERT INTO `tbl_acc_list` VALUES (10, '2-1100', 'Utang Usaha', '2-1', 1);
+INSERT INTO `tbl_acc_list` VALUES (12, '2-2200', 'Utang Gaji', '2-2', 1);
+INSERT INTO `tbl_acc_list` VALUES (13, '2-3100', 'Utang Bank', '2-3', 1);
+INSERT INTO `tbl_acc_list` VALUES (14, '2-3200', 'Pinjaman Bank Mandiri', '2-3', 1);
+INSERT INTO `tbl_acc_list` VALUES (15, '3-1100', 'Modal Tuan Premire', '3-', 1);
+INSERT INTO `tbl_acc_list` VALUES (16, '3-2000', 'Prive Tuan Premire', '3-', 2);
+INSERT INTO `tbl_acc_list` VALUES (17, '4-1000', 'Pendapatan Jasa Pengirima', '4-', 3);
+INSERT INTO `tbl_acc_list` VALUES (18, '5-1000', 'Harga Pokok', '5-', 0);
+INSERT INTO `tbl_acc_list` VALUES (19, '6-1100', 'Beban Gaji', '6-', 4);
+INSERT INTO `tbl_acc_list` VALUES (20, '6-1200', 'Beban Sewa', '6-', 4);
+INSERT INTO `tbl_acc_list` VALUES (21, '6-1300', 'Beban Asuransi', '6-', 4);
+INSERT INTO `tbl_acc_list` VALUES (22, '6-1400', 'Beban Perlg. Kantor', '6-', 4);
+INSERT INTO `tbl_acc_list` VALUES (23, '6-1500', 'Beban Listrik dan Air', '6-', 4);
+INSERT INTO `tbl_acc_list` VALUES (24, '6-1600', 'Beban Dep. Peralatan Ktr', '6-', 4);
+INSERT INTO `tbl_acc_list` VALUES (25, '6-1700', 'Beban Dep. Kendaraan', '6-', 4);
+INSERT INTO `tbl_acc_list` VALUES (26, '6-1800', 'Beban Telepon', '6-', 4);
+INSERT INTO `tbl_acc_list` VALUES (27, '6-1900', 'Beban Pemeliharaan', '6-', 4);
+INSERT INTO `tbl_acc_list` VALUES (28, '6-2000', 'Beban Iklan', '6-', 0);
+INSERT INTO `tbl_acc_list` VALUES (29, '8-1100', 'Pendapatan diluar Usaha', '8-', 0);
+INSERT INTO `tbl_acc_list` VALUES (30, '9-1000', 'Beban Administrasi', '9-', 0);
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `tbl_acc_type`
+-- 
+
+CREATE TABLE `tbl_acc_type` (
+  `idtbl_acc_type` int(11) NOT NULL auto_increment,
+  `type_no` varchar(3) default NULL,
+  `acc_type` varchar(25) default NULL,
+  PRIMARY KEY  (`idtbl_acc_type`),
+  UNIQUE KEY `acc_type_no_UNIQUE` (`type_no`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=40 ;
+
+-- 
+-- Dumping data for table `tbl_acc_type`
+-- 
+
+INSERT INTO `tbl_acc_type` VALUES (38, '8-', 'Other income');
+INSERT INTO `tbl_acc_type` VALUES (37, '6-', 'Expense');
+INSERT INTO `tbl_acc_type` VALUES (36, '5-', 'Cost of Sale');
+INSERT INTO `tbl_acc_type` VALUES (34, '3-', 'Equity');
+INSERT INTO `tbl_acc_type` VALUES (33, '2-4', 'Other Liability');
+INSERT INTO `tbl_acc_type` VALUES (32, '2-3', 'Long Term Liability');
+INSERT INTO `tbl_acc_type` VALUES (35, '4-', 'Income');
+INSERT INTO `tbl_acc_type` VALUES (31, '2-2', 'Other Current Liability');
+INSERT INTO `tbl_acc_type` VALUES (30, '2-1', 'Account Payable');
+INSERT INTO `tbl_acc_type` VALUES (29, '1-5', 'Other Asset');
+INSERT INTO `tbl_acc_type` VALUES (28, '1-4', 'Fixed Asset');
+INSERT INTO `tbl_acc_type` VALUES (27, '1-3', 'Other Current Asset');
+INSERT INTO `tbl_acc_type` VALUES (26, '1-2', 'Account Receivable');
+INSERT INTO `tbl_acc_type` VALUES (25, '1-1', 'Bank');
+INSERT INTO `tbl_acc_type` VALUES (39, '9-', 'Other Expense');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `tbl_category`
+-- 
+
+CREATE TABLE `tbl_category` (
+  `tbl_category_id` int(11) NOT NULL auto_increment,
+  `cat_no` int(11) NOT NULL,
+  `cat_name` varchar(100) NOT NULL,
+  PRIMARY KEY  (`tbl_category_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+-- 
+-- Dumping data for table `tbl_category`
+-- 
+
+INSERT INTO `tbl_category` VALUES (1, 1, 'Aktiva');
+INSERT INTO `tbl_category` VALUES (2, 2, 'Pasiva');
+INSERT INTO `tbl_category` VALUES (3, 3, 'Capital');
+INSERT INTO `tbl_category` VALUES (4, 4, 'Pendapatan Opersional');
+INSERT INTO `tbl_category` VALUES (5, 5, 'Beban Operasional');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `tbl_index`
+-- 
+
+CREATE TABLE `tbl_index` (
+  `idindex` int(11) NOT NULL auto_increment,
+  `index_no` varchar(1) NOT NULL,
+  `cash_type` varchar(10) NOT NULL,
+  PRIMARY KEY  (`idindex`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+-- 
+-- Dumping data for table `tbl_index`
+-- 
+
+INSERT INTO `tbl_index` VALUES (1, '1', 'Operating');
+INSERT INTO `tbl_index` VALUES (2, '2', 'Investing');
+INSERT INTO `tbl_index` VALUES (3, '3', 'Funding');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `tbl_trans`
+-- 
+
+CREATE TABLE `tbl_trans` (
+  `idtbl_trans` int(11) NOT NULL auto_increment,
+  `trans_id` varchar(20) NOT NULL,
+  `trans_inv` varchar(10) default NULL,
+  `trans_memo` varchar(45) default NULL,
+  PRIMARY KEY  (`idtbl_trans`),
+  UNIQUE KEY `trans_id_UNIQUE` (`trans_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+
+-- 
+-- Dumping data for table `tbl_trans`
+-- 
+
+INSERT INTO `tbl_trans` VALUES (8, 'T/122011/2618-5735', 'BKK12-10', 'Pemabayaran gaji minggu II');
+INSERT INTO `tbl_trans` VALUES (7, 'T/122011/2618-5500', 'BKK12-9', 'Pembayaran utang PT ASIH');
+INSERT INTO `tbl_trans` VALUES (5, 'T/122011/2618-0636', 'F12-01', 'Penerimaan faktur pelanggan');
+INSERT INTO `tbl_trans` VALUES (6, 'T/122011/2618-5332', 'BKK12-8', 'Pembayaran biaya telpon bulan des');
+INSERT INTO `tbl_trans` VALUES (9, 'T/012012/0322-1631', 'BKK 12-3', 'Pembelian peralatan kantor tunai');
+INSERT INTO `tbl_trans` VALUES (10, 'T/012012/0322-1935', 'BKM12-1', 'Pinjaman Bank Mandiri');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `tbl_trans_detail`
+-- 
+
+CREATE TABLE `tbl_trans_detail` (
+  `idtbl_trans_detail` int(11) NOT NULL auto_increment,
+  `trans_id` varchar(20) default NULL,
+  `index_no` varchar(10) default NULL,
+  `acc_num` varchar(10) default NULL,
+  `debet` bigint(20) default NULL,
+  `credit` bigint(20) default NULL,
+  `trans_date` date default NULL,
+  PRIMARY KEY  (`idtbl_trans_detail`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
+
+-- 
+-- Dumping data for table `tbl_trans_detail`
+-- 
+
+INSERT INTO `tbl_trans_detail` VALUES (14, 'T/122011/2618-5735', '1', '1-1000', 0, 6250000, '2011-12-26');
+INSERT INTO `tbl_trans_detail` VALUES (13, 'T/122011/2618-5735', '', '6-1100', 6250000, 0, '2011-12-26');
+INSERT INTO `tbl_trans_detail` VALUES (12, 'T/122011/2618-5500', '1', '1-1000', 0, 6000000, '2011-12-26');
+INSERT INTO `tbl_trans_detail` VALUES (11, 'T/122011/2618-5500', '', '2-1100', 6000000, 0, '2011-12-26');
+INSERT INTO `tbl_trans_detail` VALUES (7, 'T/122011/2618-0636', '', '1-2000', 7000000, 0, '2011-12-26');
+INSERT INTO `tbl_trans_detail` VALUES (8, 'T/122011/2618-0636', '', '4-1000', 0, 7000000, '2011-12-26');
+INSERT INTO `tbl_trans_detail` VALUES (9, 'T/122011/2618-5332', '', '6-1800', 1850000, 0, '2011-12-26');
+INSERT INTO `tbl_trans_detail` VALUES (10, 'T/122011/2618-5332', '1', '1-1000', 0, 1850000, '2011-12-26');
+INSERT INTO `tbl_trans_detail` VALUES (15, 'T/012012/0322-1631', '', '1-4100', 30000000, 0, '2011-12-27');
+INSERT INTO `tbl_trans_detail` VALUES (16, 'T/012012/0322-1631', '2', '1-1000', 0, 30000000, '2011-12-27');
+INSERT INTO `tbl_trans_detail` VALUES (17, 'T/012012/0322-1935', '3', '1-1000', 100000000, 0, '2011-12-28');
+INSERT INTO `tbl_trans_detail` VALUES (18, 'T/012012/0322-1935', '', '2-3200', 0, 100000000, '2011-12-28');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `tbl_user`
+-- 
+
+CREATE TABLE `tbl_user` (
+  `idtbl_user` int(11) NOT NULL auto_increment,
+  `f_name` varchar(45) NOT NULL,
+  `l_name` varchar(45) default NULL,
+  `username` varchar(45) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `create` datetime NOT NULL,
+  `update` datetime NOT NULL,
+  PRIMARY KEY  (`idtbl_user`),
+  UNIQUE KEY `username_UNIQUE` (`username`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+-- 
+-- Dumping data for table `tbl_user`
+-- 
+
+INSERT INTO `tbl_user` VALUES (1, 'Andy', 'Suwito', 'andylah', 'e59e23c26a516d1b9dd7c90671c0a26a', '2011-11-26 00:00:00', '2011-12-06 00:00:00');
+INSERT INTO `tbl_user` VALUES (2, 'Andy', 'Suwito', 'andylah1982', '040b7cf4a55014e185813e0644502ea9', '2011-11-27 00:00:00', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `temp_trans_detail`
+-- 
+
+CREATE TABLE `temp_trans_detail` (
+  `idtemp_trans_detail` int(11) NOT NULL auto_increment,
+  `session_id` varchar(45) NOT NULL,
+  `index_no` varchar(10) NOT NULL,
+  `acc_num` varchar(10) NOT NULL,
+  `debet` decimal(10,0) default NULL,
+  `credit` decimal(10,0) default NULL,
+  `trans_id` varchar(10) default NULL,
+  PRIMARY KEY  (`idtemp_trans_detail`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- 
+-- Dumping data for table `temp_trans_detail`
+-- 
